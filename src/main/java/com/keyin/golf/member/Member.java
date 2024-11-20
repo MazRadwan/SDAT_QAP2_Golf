@@ -1,4 +1,4 @@
-// src/main/java/com/keyin/golf/member/Member.java
+
 package com.keyin.golf.member;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -11,7 +11,8 @@ import java.util.Set;
 @Entity
 public class Member {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "member_sequence")
+    @SequenceGenerator(name = "member_sequence", sequenceName = "member_sequence", allocationSize = 1)
     private Long id;
 
     private String memberName;
