@@ -65,4 +65,8 @@ public class MemberController {
     public List<Member> searchByStartDate(@RequestParam LocalDate startDate) {
         return memberService.searchByStartDate(startDate);
     }
+    @GetMapping("/search/duration/{duration}")
+    public List<Member> searchByMembershipDuration(@PathVariable Integer duration) {
+        return memberService.searchByMembershipDuration(duration);
+    }
 }
