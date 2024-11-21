@@ -46,6 +46,7 @@ public class TournamentService {
         return tournamentRepository.findByStartDateBetween(start, end);
     }
 
+
     // Member management
     public Tournament addMemberToTournament(Long tournamentId, Long memberId) {
         Tournament tournament = tournamentRepository.findById(tournamentId)

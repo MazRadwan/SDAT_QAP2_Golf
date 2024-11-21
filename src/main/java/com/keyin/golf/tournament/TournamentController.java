@@ -69,6 +69,7 @@ public class TournamentController {
         return tournamentService.searchByDateRange(start, end);
     }
 
+
     // Member management endpoints
     @PostMapping("/{tournamentId}/members/{memberId}")
     public Tournament addMemberToTournament(
